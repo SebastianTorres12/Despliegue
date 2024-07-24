@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción de Salario</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Predicción de Salario</h1>
+        <form id="prediction-form">
+            <div class="form-group">
+                <label for="edad">
+                    <i class="fas fa-calendar-day"></i> Edad:
+                </label>
+                <input type="number" id="edad" name="edad" class="input-narrow" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fnlwgt">
+                    <i class="fas fa-calculator"></i> FNLWGT:
+                </label>
+                <input type="number" id="fnlwgt" name="fnlwgt" class="input-wide" required>
+            </div>
+
+            <div class="form-group">
+                <label for="educacion">
+                    <i class="fas fa-graduation-cap"></i> Educación:
+                </label>
+                <select id="educacion" name="educacion" class="input-wide" required>
+                    <option value="0">10º Grado</option>
+                    <option value="1">11º Grado</option>
+                    <option value="2">12º Grado</option>
+                    <option value="3">1º-4º Grado</option>
+                    <option value="4">5º-6º Grado</option>
+                    <option value="5">7º-8º Grado</option>
+                    <option value="6">9º Grado</option>
+                    <option value="7">Asociado Académico</option>
+                    <option value="8">Asociado Profesional</option>
+                    <option value="9">Licenciatura</option>
+                    <option value="10">Doctorado</option>
+                    <option value="11">Graduado de Secundaria</option>
+                    <option value="12">Máster</option>
+                    <option value="13">Preescolar</option>
+                    <option value="14">Escuela Profesional</option>
+                    <option value="15">Alguna Universidad</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="educacion_num">
+                    <i class="fas fa-book"></i> Educación (Num):
+                </label>
+                <input type="number" id="educacion_num" name="educacion_num" class="input-narrow" required>
+            </div>
+
+            <div class="form-group">
+                <label for="estado_civil">
+                    <i class="fas fa-heart"></i> Estado Civil:
+                </label>
+                <select id="estado_civil" name="estado_civil" class="input-wide" required>
+                    <option value="0">Con Pareja</option>
+                    <option value="1">Soltero</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="relacion">
+                    <i class="fas fa-users"></i> Relación:
+                </label>
+                <select id="relacion" name="relacion" class="input-wide" required>
+                    <option value="0">Esposo</option>
+                    <option value="1">No en la familia</option>
+                    <option value="2">Otro pariente</option>
+                    <option value="3">Hijo propio</option>
+                    <option value="4">No casado</option>
+                    <option value="5">Esposa</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ocupacion">
+                    <i class="fas fa-briefcase"></i> Ocupación:
+                </label>
+                <select id="ocupacion" name="ocupacion" class="input-wide" required>
+                    <option value="0">Administrativo-Clerical</option>
+                    <option value="1">Fuerzas Armadas</option>
+                    <option value="2">Artesanía-Reparación</option>
+                    <option value="3">Ejecutivo-Gerencial</option>
+                    <option value="4">Agricultura-Pesca</option>
+                    <option value="5">Manipuladores-Limpiadores</option>
+                    <option value="6">Operador-Maquinaria</option>
+                    <option value="7">Otro Servicio</option>
+                    <option value="8">Servicios en el Hogar</option>
+                    <option value="9">Especialidad Profesional</option>
+                    <option value="10">Servicios de Protección</option>
+                    <option value="11">Ventas</option>
+                    <option value="12">Soporte Técnico</option>
+                    <option value="13">Transporte-Movimiento</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="raza">
+                    <i class="fas fa-user-tie"></i> Raza:
+                </label>
+                <select id="raza" name="raza" class="input-wide" required>
+                    <option value="0">Amerindio-Eskimo</option>
+                    <option value="1">Asiático-Pacífico</option>
+                    <option value="2">Negro</option>
+                    <option value="3">Otro</option>
+                    <option value="4">Blanco</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="genero">
+                    <i class="fas fa-genderless"></i> Género:
+                </label>
+                <select id="genero" name="genero" class="input-wide" required>
+                    <option value="0">Mujer</option>
+                    <option value="1">Hombre</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ganancia-capital">
+                    <i class="fas fa-dollar-sign"></i> Ganancia Capital:
+                </label>
+                <input type="number" id="ganancia-capital" name="ganancia-capital" class="input-narrow" required>
+            </div>
+
+            <div class="form-group">
+                <label for="perdida-capital">
+                    <i class="fas fa-dollar-sign"></i> Pérdida Capital:
+                </label>
+                <input type="number" id="perdida-capital" name="perdida-capital" class="input-narrow" required>
+            </div>
+
+            <div class="form-group">
+                <label for="horas_semana">
+                    <i class="fas fa-clock"></i> Horas por Semana:
+                </label>
+                <input type="number" id="horas_semana" name="horas_semana" class="input-narrow" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pais">
+                    <i class="fas fa-flag"></i> País:
+                </label>
+                <select id="pais" name="pais" class="input-wide" required>
+                    <option value="0">No estadounidense</option>
+                    <option value="1">Estadounidense</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tipo_empleo">
+                    <i class="fas fa-building"></i> Tipo de Empleo:
+                </label>
+                <select id="tipo_empleo" name="tipo_empleo" class="input-wide" required>
+                    <option value="0">Gobierno</option>
+                    <option value="1">Privado</option>
+                    <option value="2">Autónomo</option>
+                    <option value="3">Sin Pago</option>
+                </select>
+            </div>
+
+            <button type="submit">
+                <i class="fas fa-calculator"></i> Predecir
+            </button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
